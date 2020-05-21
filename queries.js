@@ -68,7 +68,8 @@ const postGradeById = (request, response) => {
             if (error) {
               throw error
             }
-            response.status(201).send(`${results.row} updated successfuly`)
+            response.status(201)
+            response.json(results.row)
         })
     }
 }
@@ -83,7 +84,8 @@ const register = (request, response) => {
             if (error) {
                 throw error
             }
-            response.status(201).send(`${results.row} added successfuly`)
+            response.status(201)
+            response.json(results.row)
         })
     }
   }
